@@ -1,15 +1,38 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Mon Oct 21 2024 14:49:02 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="660b2c3be79c786fd7de1032" data-wf-site="660b2c3be79c786fd7de0ffd">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Portfolio - Webflow HTML website template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Animation</title>
+    <link rel="stylesheet" href="./css/global.css"> <!-- Link to your CSS file -->
 </head>
-<style>
-body {
-  background-color: #ffffff;
-  margin: 0;
-  overflow-x: hidden;
-}
-</style>
+<body>
+    <!-- Add the background div -->
+    <div class="bg"></div>
+    <!-- Your other content here -->
+    <h1 style="color: rgb(255, 255, 255); z-index: 1;">Hello World</h1>
+    
+    <!-- Footer -->
+    <div class="footer">
+      <div class="time-millisec">00:00:00.0</div>
+      <div class="author-info">Devin Winslow Copyright</div>
+  </div>
+
+  <script>
+      function getTimeMillis() {
+          var myTime = document.querySelector(".time-millisec");
+          var date = new Date();
+          var getTime = date.toLocaleTimeString([], {
+              hour: '2-digit',
+              minute: '2-digit',
+              second: '2-digit',
+              fractionalSecondDigits: 1 // Adds 1 digit milliseconds
+          });
+          myTime.innerText = getTime;
+      }
+      setInterval(getTimeMillis, 100); // Update every 100ms for milliseconds
+  </script>
+  <!-- Footer -->
+
 </body>
 </html>
